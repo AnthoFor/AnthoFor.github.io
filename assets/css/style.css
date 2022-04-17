@@ -91,16 +91,22 @@ body {
 /* responsivité de la navbar */
 .icon {
     position: absolute;
-    right: 4%;
-    top: 20%;
+    /* right: 4%; */
+    /* top: 20%; */
     display: none;
-  }
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     #navbar {
         justify-content: flex-end;
         align-items: center;
         height: 6vh;
+        overflow: hidden;
+        position: fixed;
+    }
+    .icon img {
+        height: 10vh;
+        width: 10vh;
     }
     .topnav a {
         display: none;
@@ -108,7 +114,7 @@ body {
     .topnav a.icon {
         display: unset;
         position: absolute;
-        right: 2vw;
+        right: 15vw;
         top: 2vh;
     }
     .topnav.responsive {
@@ -118,8 +124,8 @@ body {
     }
     .topnav.responsive a.icon {
         position: absolute;
-        right: 2vw;
-        top: 2vh; 
+        right: 15vw;
+        top: 2vh;
     }
     .topnav.responsive a {
         /* float: none; */
