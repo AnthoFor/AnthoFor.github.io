@@ -28,6 +28,7 @@ window.addEventListener('load', () => {
         }, 0.2, '-=1');
     TL.play();
 })
+
 function responsiveNavBar() {
     var navTop = document.getElementById("navbar-right");
     let hNavBar = document.getElementById("navbar").style.height;
@@ -39,17 +40,16 @@ function responsiveNavBar() {
     }
 
     if (hNavBar == "14vh") {
-        document.getElementById("navbar").style.height = "6vh";
-        console.log("hauteur navbar2 : " + hNavBar); 
-    }
-    else if (hNavBar = "6vh") {
+        document.getElementById("navbar").style.height = "7vh";
+        console.log("hauteur navbar2 : " + hNavBar);
+    } else if (hNavBar = "7vh") {
         document.getElementById("navbar").style.height = "14vh";
         console.log("hauteur navbar3 : " + hNavBar);
         return;
-    } 
-    
-    
-  } 
+    }
+
+
+}
 
 
 console.log("height a :" + a);
@@ -68,7 +68,6 @@ window.onscroll = function () {
         // document.getElementById("navbar").style.height = "5vh";
     } else if (document.documentElement.scrollTop > 50 & getWidth > 600) {
         document.getElementById("navbar").style.backgroundColor = "#422664";
-        document.getElementById("navbar").style.padding = "12px 10px";
         document.getElementById("navbar").style.color = "white";
         document.getElementById("dsi").style.opacity = "0";
         document.getElementById("dsi").style.visibility = "hidden";
@@ -100,7 +99,7 @@ window.onscroll = function () {
     if (document.documentElement.scrollTop > z + 100) {
         document.getElementById("frontBackEndSkills").style.left = "0";
     } else if (getWidth < 600) {
-        document.getElementById("frontBackEndSkills").style.left = "0"; 
+        document.getElementById("frontBackEndSkills").style.left = "0";
     } else {
         document.getElementById("frontBackEndSkills").style.left = "-200%";
     }
