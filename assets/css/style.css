@@ -456,6 +456,10 @@ progress::-moz-progress-bar {
     max-width: unset;
     min-width: 5%;
     }
+    #cmsWebDesignSkills .progress img {
+        right: unset;
+        left: -6%;
+    }
 }
 /* EOF section SKILLS */
 
