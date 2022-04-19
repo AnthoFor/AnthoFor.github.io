@@ -58,8 +58,6 @@ console.log("height y :" + y);
 console.log("height x :" + x);
 console.log("width :" + getWidth);
 
-
-
 window.onscroll = function () {
     hNavBar = document.getElementById("navbar").style.height;
     if (document.documentElement.scrollTop > 50 & getWidth < 600) {
