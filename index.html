@@ -8,9 +8,11 @@
   <meta name="description" content="Curriculum Vitae Anthony Foret">
   <meta name="author" content="Anthony Foret">
   <title>CV en ligne</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="assets/img/logoPurple.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -19,34 +21,40 @@
     <div class="topnav" id="navbar-right">
       <a class="underlineEffects" href="#about">A propos</a>
       <a class="underlineEffects" href="#skills">Compétences</a>
-      <a class="underlineEffects" href="#exp">XP</a>
+      <a class="underlineEffects" href="#exp">Parcours</a>
       <a class="underlineEffects" href="#portfolio">Portfolio</a>
       <a class="underlineEffects" href="#contact">Contact</a>
       <a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
-        <img src="assets/img/hamburger.svg" alt="">
+        <img src="assets/img/hamburger.svg" alt="logo menu">
       </a>
     </div>
   </div>
-  <div class="animtitle" id="topbar">
+  <div id="topbar">
     <div id="dsi">
-      <h1><span>Je </span><span> m'appelle </span> <span id="purpleText">Anthony </span></h1>
+      <h1><span>Je </span><span> s'appelle </span> <span id="purpleText">GROOT <img id="grootLogo"
+            src="assets/img/groot.svg" alt="groot logo"> </span></h1>
       <h1><span>Je </span><span> suis </span> <span>developpeur </span><span>web </span></h1>
     </div>
     <div id="titlogo">
       <ul id="socialLogo" class="medias">
-        <li class="bulle"><img src="assets/img/facebook-svgrepo-com.svg" alt="Facebook logo" class="logo-medias"></li>
-        <li class="bulle"><img src="assets/img/github-svgrepo-com.svg" alt="github logo" class="logo-medias"></li>
-        <li class="bulle"><img src="assets/img/linkedin-svgrepo-com.svg" alt="linkedin logo" class="logo-medias"></li>
+        <li class="bulle"><a href="#"><img class="fglLogo" id="fbLogo" src="assets/img/facebook-svgrepo-com.svg"
+              alt="Facebook logo"></a></li>
+        <li class="bulle"><a href="#"><img class="fglLogo" id="ghLogo" src="assets/img/github-svgrepo-com.svg"
+              alt="github logo"></a></li>
+        <li class="bulle"><a href="#"><img class="fglLogo" id="liLogo" src="assets/img/linkedin-svgrepo-com.svg"
+              alt="linkedin logo"></a></li>
       </ul>
     </div>
   </div>
-  <section id="about">
+  <section data-aos="fade-down" id="about">
     <div id="aboutTitle">
       <h2>A propos de moi</h2>
     </div>
     <div id="aboutContent">
-      <p>Actuellement en formation à la Manu, teh best school ever ;) , j'aime apprendre ce domaine ou le add . commit
-        et push n'ont plus de secret pour moi ( ou pas ?) Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <p>Actuellement en formation à la Manu , j'aime apprendre ce domaine ou le add . commit
+        et push n'ont plus de secret pour moi ( ou pas ?). Heureusement que lorem est la ;)
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Provident placeat impedit velit officiis, nisi id voluptatum illo perspiciatis vero ut, inventore, sed
         perferendis quasi quia laudantium voluptate recusandae pariatur beatae.
         Consequuntur, nemo repudiandae cupiditate expedita aperiam maiores fugit iure commodi ipsa dolorem quis ducimus,
@@ -55,7 +63,7 @@
         Quod omnis dolorem nam facere similique numquam nihil ipsam eveniet impedit vero dolorum magnam dolor, quis
         doloribus possimus voluptatem iste eligendi voluptatum saepe amet commodi velit! Debitis omnis dolorum
         voluptatum!
-        </p>
+      </p>
       <div id="aboutContentImg">
         <div class="schoolLogo" id="fcclogo"></div>
         <div class="schoolLogo" id="laManuLogo"></div>
@@ -69,48 +77,48 @@
       <h2>Compétences</h2>
     </div>
     <div id="skillsContent">
-      <div id="frontBackEndSkills">
+      <div data-aos="fade-right" id="frontBackEndSkills">
         <p>Front end & Back end</p>
-          
-          <div class="progress" data-label="HTML">
-            <img src="assets/img/htmlIcon.png" alt="Html Icon">
-            <span class="value" style="width:90%;"></span>
-            
-          </div>
-          
-          <div class="progress" data-label="CSS">
-            <img src="assets/img/cssIcon.png" alt="CSS Icon">
-            <span class="value" style="width:60%;"></span>
-          </div>
-          
-          <div class="progress" data-label="JS">
-            <img src="assets/img/jsIcon.png" alt="JS Icon">
-            <span class="value" style="width:1%;"></span>
-          </div>
-          
-          <div class="progress" data-label="PHP">
-            <img src="assets/img/phpIcon.png" alt="PHP Icon">
-            <span class="value" style="width:1%;"></span>
-          </div>
+
+        <div class="progress" data-label="HTML">
+          <img src="assets/img/htmlIcon.png" alt="Html Icon">
+          <span class="value" style="width:90%;"></span>
+
+        </div>
+
+        <div class="progress" data-label="CSS">
+          <img src="assets/img/cssIcon.png" alt="CSS Icon">
+          <span class="value" style="width:60%;"></span>
+        </div>
+
+        <div class="progress" data-label="JS">
+          <img src="assets/img/jsIcon.png" alt="JS Icon">
+          <span class="value" style="width:5%;"></span>
+        </div>
+
+        <div class="progress" data-label="PHP">
+          <img src="assets/img/phpIcon.png" alt="PHP Icon">
+          <span class="value" style="width:3%;"></span>
+        </div>
       </div>
-      <div id="cmsWebDesignSkills">
+      <div data-aos="fade-left" id="cmsWebDesignSkills">
         <p>CMS & Webdesign</p>
         <div class="progress" data-label="WordPress">
           <img src="assets/img/wordPressIcon.png" alt="WordPress">
-          <span class="value" style="width:1%;"></span>
+          <span class="value" style="width:3%;"></span>
         </div>
-        
+
         <div class="progress" data-label="Adobe XD">
           <img src="assets/img/adobeXDIcon.png" alt="Adobe XD">
           <span class="value" style="width:40%;"></span>
         </div>
-        
+
         <div class="progress" data-label="GIMP">
           <img src="assets/img/gimpIcon.png" alt="GIMP">
           <span class="value" style="width:12%;"></span>
         </div>
       </div>
-      <div id="workFlowSkills">
+      <div data-aos="fade-right" id="workFlowSkills">
         <p>Environement de travail</p>
         <div class="progress" data-label="GitHub">
           <img src="assets/img/gitIcon.png" alt="GitHub">
@@ -127,42 +135,47 @@
       </div>
     </div>
   </section>
-  <section id="exp">
+  <section data-aos="fade-right" id="exp">
     <div id="expTitle">
       <h2>Parcours</h2>
     </div>
     <div id="expContent">
       <section id="expFormation">
-        <h1>Formation</h1><hr>
+        <h1>Formation</h1>
+        <hr>
         <h2>Développeur Web et Web Mobile</h2>
         <h4>2022</h4>
         <h3>La Manu</h3>
-        <p>Titre RNCP 31114</p><hr>
+        <p>Titre RNCP 31114</p>
+        <hr>
         <h2>Installateur Thermique</h2>
         <h4>2011</h4>
         <h3>Lycée Augustin Hebert</h3>
-        <p>CAP Installateur Thermique</p><hr>
+        <p>CAP Installateur Thermique</p>
+        <hr>
         <h2>Electronicien</h2>
         <h4>2001 - 2003</h4>
         <h3>Lycée Louis Armand</h3>
         <p>BEP Electronique</p>
       </section>
       <section id="expWorks">
-        <h1>Professionel</h1><hr>
+        <h1>Professionel</h1>
+        <hr>
         <h2>Conducteur de train</h2>
         <h4>2014 - </h4>
-        <h3>SNCF</h3>
-        <p>Conduite de TER sur toute l'étoile d'Amiens</p><hr>    
+        <h3><img id="sncfLogo" src="assets/img/logo-sncf.svg" alt="logo SNCF"> - SNCF</h3>
+        <p>Conduite de TER sur toute l'étoile d'Amiens</p>
+        <hr>
         <h2>Logisticien</h2>
         <h4>2004 - 2014</h4>
-        <h3>IKEA</h3>
+        <h3> <img id="ikeaLogo" src="assets/img/ikea-logo.svg" alt=""> - IKEA</h3>
         <p>
           Inventoriste, cariste, statisticien.
         </p>
       </section>
     </div>
   </section>
-  <section id="portfolio">
+  <section data-aos="fade-right" id="portfolio">
     <div id="portfolioTitle">
       <h2>Portfolio</h2>
     </div>
@@ -170,15 +183,46 @@
       <p>En cours</p>
     </div>
   </section>
-  <section id="contact">
+  <section data-aos="fade-right" id="contact">
     <div id="contactTitle">
       <h2>Contact</h2>
     </div>
     <div id="contactContent">
-
+      <div id="contactMail">
+        <img class="contactLogos" src="assets/img/mailLogo.svg" alt="mail logo">
+        <hr>
+        <span class="underlineEffects"><a href="mailto:anthony.foret@protonmail.com">anthony.foret@protonmail.com</a></span>
+        <!-- <p>anthony.foret@protonmail.com</p> -->
+      </div>
+      <div id="contactSocialNetwork">
+        <img class="contactLogos" src="assets/img/contactSocialNetworkLogo.svg" alt="share Logo">
+        <hr>
+        <div id="contactSocialNetwork2">
+          <a href="https://discord.gg/Antho#7861" target="_blank"> <img class="contactLogos contactLogosLink" src="assets/img/discordLogo.svg" alt="Discord Logo"></a>
+          <a href="http://github.com/AnthoFor" target="_blank" rel="noopener noreferrer"> <img class="contactLogos contactLogosLink" src="assets/img/contactGithubLogo.svg" alt="GitHub Logo"></a>
+          <a href="https://www.facebook.com/profile.php?id=100018834391925" target="_blank" rel="noopener noreferrer"><img class="contactLogos contactLogosLink" src="assets/img/contactFacebookLogo.svg" alt="Facebook Logo"></a>
+          <a href="https://fr.linkedin.com/" target="_blank" rel="noopener noreferrer"><img class="contactLogos contactLogosLink" src="assets/img/contactLinkedinLogo.svg" alt="LinkedIn Logo"></a>
+        </div>
+      </div>
+      <div id="contactTel">
+        <img class="contactLogos" src="assets/img/contactPhoneLogo.svg" alt="Phone Logo">
+        <hr>
+        <a href="tel:+0626150798"><span>06.26.15.07.98</span></a>
+      </div>
+      <div id="contactMaps"> <span><img class="contactLogos" src="assets/img/mapsLogo.svg" alt="GPS Logo"></span>
+        <hr>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20566.60625408804!2d2.3030517!3d49.8832982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1650539546806!5m2!1sfr!2sfr"
+          width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </section>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script>AOS.init();</script>
   <script src="assets/js/app.js"></script>
 </body>
 
