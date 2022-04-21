@@ -192,7 +192,9 @@ body {
 
 }
 #grootLogo {
+    position: relative;
     max-height: 4vh;
+    top: 0.5vh;
 }
 #dsi {
     transition: 0.5s;
@@ -313,39 +315,47 @@ body {
 }
 
 #aboutContentImg {
-    height: 10%;
+    width: 100%;
+    height: 10vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 3%;
 }
 
-.schoolLogo {
+/* .schoolLogo {
     width: 25%;
     height: 100%;
-}
+} */
 
-#fcclogo,
+/* #fccLogo,
 #laManuLogo,
 #w3sLogo,
 #ocrLogo {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+} */
+
+.abtCntLogo {
+    height: 100%;
+    max-height: 100%;
+    width: 25%;
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    transition: 0.4s;
+}
+.abtCntLogo:hover {
+    transform: scale(1.2);
+}
+#fccLogo2, #laManuLogo2, #w3sLogo2, #ocrLogo2 {
+    max-height: 100%;
+    max-width: 75%;
+    object-fit: contain;
 }
 
-#fcclogo {
-    background-image: url("../img/freecodecampLogoWhite.png");
-    flex: 9;
-}
-
-#laManuLogo {
-    background-image: url("../img/LaManuIcon.png");
-    flex: 9;
-}
-
-#w3sLogo {
+/* #w3sLogo {
     background-image: url("../img/W3Schools_logo.svg");
     flex: 1;
 }
@@ -353,7 +363,7 @@ body {
 #ocrLogo {
     background-image: url("../img/orcLogo.svg");
     flex: 9;
-}
+} */
 
 @media screen and (max-width: 600px) {
     #aboutContent {
@@ -377,14 +387,14 @@ body {
     #aboutContentImg {
         flex: 1;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        flex-direction: column;
     }
 
-    .schoolLogo {
-        background-size: contain;
-        flex: 1;
-        flex-wrap: wrap;
-        width: 10vw;
+    .abtCntLogo {
+        max-width: unset;
+        max-height: unset;
+        width: 100%;
         height: 10vh;
     }
 }
@@ -562,16 +572,16 @@ progress::-moz-progress-bar {
     object-fit: contain;
 }
 #expContent h2 {
-    font-size: 5vw;
+    font-size: 3vw;
     color: #874ECD
 }
 
 #expContent h4 {
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 #expContent h3 {
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 #expContent p {
@@ -590,19 +600,20 @@ progress::-moz-progress-bar {
         flex-direction: row;
     }
     #expContent h2 {
-        font-size: 2rem;
-    }
-
-    #expContent h4 {
-        font-size: 1rem;
-    }
-
-    #expContent h3 {
         font-size: 1.5rem;
     }
 
+    #expContent h4 {
+        font-size: 1.1rem;
+    }
+
+    #expContent h3 {
+        font-size: 1.3rem;
+        
+    }
+
     #expContent p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -658,19 +669,27 @@ progress::-moz-progress-bar {
 }
 .contactLogosLink:hover {
     transform: rotateY(360deg);
+    color: black;
+    fill: "#000000"
 }
+.hidedClass {
+    display: none;
+}
+
 /* Contact version desktop */
 
 @media screen and (min-width: 600px) {
     #contactContent {
         align-items: unset;
-        
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+    }
+    #contactMail span, #contactTel span {
+        padding-bottom: 1vh;
     }
     #contactMail, #contactSocialNetwork, #contactTel {
-        /* width: 33%; */
         flex: 1;
     }
     #contactSocialNetwork2 {
@@ -683,5 +702,13 @@ progress::-moz-progress-bar {
     }
     #contactMaps span {
         display: block;
+    }
+    #contactMaps iframe {
+        margin-top: 2vh;
+    }
+    .hidedClass {
+        display: unset;
+        opacity: 0;
+        width: 1px;
     }
 }
