@@ -661,6 +661,7 @@ progress::-moz-progress-bar {
     max-height: 4vh;
 }
 #contactMaps iframe {
+    width: 80%;
     border-radius: 10px;
 }
 
@@ -710,5 +711,9 @@ progress::-moz-progress-bar {
         display: unset;
         opacity: 0;
         width: 1px;
+    }
+    iframe {
+        width: 70%;
+
     }
 }
