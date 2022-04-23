@@ -326,9 +326,7 @@ body {
     justify-content: center;
     transition: 0.4s;
 }
-.abtCntLogo:hover {
-    transform: scale(1.2);
-}
+
 #fccLogo2, #laManuLogo2, #w3sLogo2, #ocrLogo2 {
     max-height: 100%;
     max-width: 75%;
@@ -649,9 +647,12 @@ progress::-moz-progress-bar {
         transition-timing-function: ease-in-out;
         transition-duration: 0.4s;
         text-align: center;
+        transform: translateZ(0);
     }
     .portfolioCards:hover {
         filter: grayscale(0%);
+        transform: scale(1.1);
+        transform: translateZ(20);
     }
 }
 

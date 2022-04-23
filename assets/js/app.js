@@ -75,14 +75,17 @@ window.onscroll = function () {
         document.getElementById("socialLogo").style.visibility = "visible";
     }
 
-    // if (document.documentElement.scrollTop > a) {
-    //     document.getElementById("aboutContent").style.left = "0";
-    // } else if (getWidth < 600) {
+    // if (document.documentElement.scrollTop > a && document.documentElement.scrollTop < z) {
+    // document.getElementById("aboutContent").style.left = "0";
+    // document.getElementById("aboutNavBtn").style.color ="#000000";
+    // } else {
+    // document.getElementById("aboutNavBtn").style.color ="#FFFFFF";
+    // }
+    // else if (getWidth < 600) {
     //     document.getElementById("aboutContent").style.left = "0";
     // } else {
     //     document.getElementById("aboutContent").style.left = "-200%";
     // }
-
     // if (document.documentElement.scrollTop > z + 100) {
     //     document.getElementById("frontBackEndSkills").style.left = "0";
     // } else if (getWidth < 600) {
@@ -90,7 +93,6 @@ window.onscroll = function () {
     // } else {
     //     document.getElementById("frontBackEndSkills").style.left = "-200%";
     // }
-
     // if (document.documentElement.scrollTop > y + 100) {
     //     document.getElementById("cmsWebDesignSkills").style.right = "0";
     // } else if (getWidth < 600) {
@@ -98,13 +100,10 @@ window.onscroll = function () {
     // } else {
     //     document.getElementById("cmsWebDesignSkills").style.right = "-200%";
     // }
-
     // if (document.documentElement.scrollTop > x + 100) {
     //     document.getElementById("workFlowSkills").style.left = "0";
     // } else if (getWidth < 600) {
     //     document.getElementById("workFlowSkills").style.left = "0";
     // } else {
     //     document.getElementById("workFlowSkills").style.left = "-200%";
-    // }
-
 }
