@@ -5,6 +5,7 @@ const getPixAbout = document.getElementById("about");
 const getPixSkill1 = document.getElementById("frontBackEndSkills");
 const getPixSkill2 = document.getElementById("cmsWebDesignSkills");
 const getWidth = screen.width;
+const getHeight = screen.height;
 var a = getPixTopBar.scrollHeight;
 var z = a + getPixAbout.scrollHeight;
 var y = z + getPixSkill1.scrollHeight;
@@ -18,7 +19,7 @@ window.addEventListener('load', () => {
 
     TL
         .staggerFrom(titreSpans, 1, {
-            top: -50,
+            top: -250,
             opacity: 0,
             ease: "power2.out"
         }, 0.2)
@@ -69,12 +70,11 @@ window.onscroll = function () {
     if (document.documentElement.scrollTop > 250) {
         document.getElementById("socialLogo").style.opacity = "0";
         document.getElementById("socialLogo").style.visibility = "hidden";
-
     } else {
         document.getElementById("socialLogo").style.opacity = "1";
         document.getElementById("socialLogo").style.visibility = "visible";
     }
-
+}
     // if (document.documentElement.scrollTop > a && document.documentElement.scrollTop < z) {
     // document.getElementById("aboutContent").style.left = "0";
     // document.getElementById("aboutNavBtn").style.color ="#000000";
@@ -106,4 +106,3 @@ window.onscroll = function () {
     //     document.getElementById("workFlowSkills").style.left = "0";
     // } else {
     //     document.getElementById("workFlowSkills").style.left = "-200%";
-}

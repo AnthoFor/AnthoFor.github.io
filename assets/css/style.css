@@ -193,6 +193,7 @@ body {
     top: 0.5vh;
 }
 #dsi {
+    padding-left: 6vw;
     transition: 0.5s;
 }
 
@@ -207,7 +208,7 @@ body {
 .medias {
     list-style-type: none;
     position: absolute;
-    left: 3%;
+    padding-left: 6vw;
     margin-top: 10%;
     display: flex;
     gap: 5%;
@@ -517,8 +518,8 @@ progress::-moz-progress-bar {
     margin: auto;
     padding: 3% 3% 3% 3%;
     border-radius: 20px;
-    background-color: rgb(0, 0, 0, 0.6);
-    border: 1px solid rgb(255, 255, 255, 0.3);
+    /* background-color: rgb(0, 0, 0, 0.6); */
+    /* border: 1px solid rgb(255, 255, 255, 0.3); */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -531,33 +532,40 @@ progress::-moz-progress-bar {
 #expFormation,
 #expWorks {
     flex: 1;
+    background-color: rgb(0, 0, 0, 0.6);
     border: 1px solid rgb(255, 255, 255, 0.3);
     border-radius: 10px;
-    padding: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vw;
+    padding-right: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
 }
 #sncfLogo, #ikeaLogo {
     max-width: 50px;
     object-fit: contain;
 }
 #expContent h2 {
-    font-size: 3vw;
+    font-size: 3.8vw;
     color: #874ECD
 }
 
 #expContent h4 {
-    font-size: 2.5vw;
-}
-
-#expContent h3 {
     font-size: 3vw;
 }
 
+#expContent h3 {
+    font-size: 4vw;
+}
+
 #expContent p {
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 #expContent hr {
-    margin: 2vh;
+    margin: 1.6vh;
     border: 0;
     height: 1px;
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
@@ -647,12 +655,10 @@ progress::-moz-progress-bar {
         transition-timing-function: ease-in-out;
         transition-duration: 0.4s;
         text-align: center;
-        transform: translateZ(0);
     }
     .portfolioCards:hover {
         filter: grayscale(0%);
         transform: scale(1.1);
-        transform: translateZ(20);
     }
 }
 
