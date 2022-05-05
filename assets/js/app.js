@@ -66,7 +66,6 @@ window.onscroll = function () {
         document.getElementById("dsi").style.opacity = "100";
         document.getElementById("dsi").style.visibility = "visible";
     }
-
     if (document.documentElement.scrollTop > 250) {
         document.getElementById("socialLogo").style.opacity = "0";
         document.getElementById("socialLogo").style.visibility = "hidden";
