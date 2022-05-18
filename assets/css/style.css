@@ -620,7 +620,8 @@ progress::-moz-progress-bar {
 }
 .cardsImg {
     position: absolute;
-    height:auto; /* permet de le positioner*/
+    /* Ne pas mettre de hauteur, sinon le positionnement est relou*/
+    height:auto; 
     display: flex;
     justify-content: center;
     padding-bottom: 1vh;
@@ -658,7 +659,9 @@ progress::-moz-progress-bar {
         width: 25%;
         transition-timing-function: ease-in-out;
         transition-duration: 0.4s;
-        text-align: center;
+    }
+    .portfolioCards:hover {
+        transform: scale(1.1);
     }
     .cardsBg {
         opacity: unset;
