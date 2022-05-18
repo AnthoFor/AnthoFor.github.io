@@ -614,22 +614,20 @@ progress::-moz-progress-bar {
     border: 1px solid white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
 }
 .cardsImg {
     position: absolute;
-    height: 10%;
+    height:auto; /* permet de le positioner*/
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1vh;
 }
-.cardsImg1 {
-    top:21%;
-}
-.cardsImg2 {
-    top: 45.7%;
-}
+
 .cardsImg img {
-    height: 30%;
+    max-height: 5vh;
 }
 .cardsBg {
     width: 100%;
@@ -671,20 +669,6 @@ progress::-moz-progress-bar {
     .cardsBg:hover {
         filter: grayscale(0%);
         cursor: pointer;
-    }
-    .cardsImg {
-        height:10%;
-        position: absolute;
-    }
-    .cardsImg img {
-        max-height: 100%;
-        height: unset;
-    }
-    .cardsImg1 {
-        top:75%;
-    }
-    .cardsImg2 {
-        top: 75%;
     }
 }
 
