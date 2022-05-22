@@ -48,10 +48,39 @@ function responsiveNavBar() {
         console.log("hauteur navbar3 : " + hNavBar);
         return;
     }
-
-
 }
+
+function whereScrollFromTop() { //Où l'utilisateur se trouve?
+    let bloc1Height = document.getElementById("topbar").scrollHeight;
+    let bloc2Height = document.getElementById("about").scrollHeight;
+    let bloc3Height = document.getElementById("skills").scrollHeight;
+    let bloc4Height = document.getElementById("exp").scrollHeight;
+    let bloc5Height = document.getElementById("portfolio").scrollHeight;
+    let bloc6Height = document.getElementById("contact").scrollHeight;
+    fullHeight = bloc1Height + bloc2Height + bloc3Height + bloc4Height + bloc5Height + bloc6Height;
+    averagePosition = document.documentElement.scrollTop;
+    if (averagePosition > 0 && averagePosition <= bloc1Height) {
+    } else if (averagePosition > bloc1Height && averagePosition <= bloc1Height + bloc2Height) {
+        document.getElementById("progressNav2").style.opacity = "1";
+        document.getElementById("progressNav2").style.left = "44.6%";
+    } else if (averagePosition > bloc1Height + bloc2Height  && averagePosition <= bloc1Height + bloc2Height + bloc3Height) {
+        document.getElementById("progressNav2").style.left = "50.7%";
+    } else if (averagePosition > bloc1Height + bloc2Height +bloc3Height && averagePosition <= bloc1Height + bloc2Height + bloc3Height + bloc4Height) {
+
+        document.getElementById("progressNav2").style.left = "56.9%";
+    } else if (averagePosition > bloc1Height+bloc2Height+bloc3Height+bloc4Height && averagePosition <= bloc1Height + bloc2Height + bloc3Height + bloc4Height + bloc5Height) {
+        document.getElementById("progressNav2").style.left = "62%";
+    } else if (averagePosition > bloc1Height+bloc2Height+bloc3Height+bloc4Height+bloc5Height) {
+        document.getElementById("progressNav2").style.left = "66.9%";
+    } else {
+        document.getElementById("progressNav2").style.opacity = "0";
+    }   
+}
+
+//Des le scroll, recalcul de la hauteur (calcFullHeight) en cas de 
+//redimensionnement de l'écran par le user.
 window.onscroll = function () {
+    whereScrollFromTop();
     hNavBar = document.getElementById("navbar").style.height;
     if (document.documentElement.scrollTop > 50 & getWidth < 600) {
         document.getElementById("navbar").style.backgroundColor = "#422664";
@@ -74,34 +103,3 @@ window.onscroll = function () {
         document.getElementById("socialLogo").style.visibility = "visible";
     }
 }
-    // if (document.documentElement.scrollTop > a && document.documentElement.scrollTop < z) {
-    // document.getElementById("aboutContent").style.left = "0";
-    // document.getElementById("aboutNavBtn").style.color ="#000000";
-    // } else {
-    // document.getElementById("aboutNavBtn").style.color ="#FFFFFF";
-    // }
-    // else if (getWidth < 600) {
-    //     document.getElementById("aboutContent").style.left = "0";
-    // } else {
-    //     document.getElementById("aboutContent").style.left = "-200%";
-    // }
-    // if (document.documentElement.scrollTop > z + 100) {
-    //     document.getElementById("frontBackEndSkills").style.left = "0";
-    // } else if (getWidth < 600) {
-    //     document.getElementById("frontBackEndSkills").style.left = "0";
-    // } else {
-    //     document.getElementById("frontBackEndSkills").style.left = "-200%";
-    // }
-    // if (document.documentElement.scrollTop > y + 100) {
-    //     document.getElementById("cmsWebDesignSkills").style.right = "0";
-    // } else if (getWidth < 600) {
-    //     document.getElementById("cmsWebDesignSkills").style.right = "0";
-    // } else {
-    //     document.getElementById("cmsWebDesignSkills").style.right = "-200%";
-    // }
-    // if (document.documentElement.scrollTop > x + 100) {
-    //     document.getElementById("workFlowSkills").style.left = "0";
-    // } else if (getWidth < 600) {
-    //     document.getElementById("workFlowSkills").style.left = "0";
-    // } else {
-    //     document.getElementById("workFlowSkills").style.left = "-200%";
