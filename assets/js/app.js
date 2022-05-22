@@ -1,15 +1,14 @@
 const titreSpans = document.querySelectorAll('h1 span');
 const medias = document.querySelectorAll('.bulle');
-const getPixTopBar = document.getElementById("topbar");
-const getPixAbout = document.getElementById("about");
-const getPixSkill1 = document.getElementById("frontBackEndSkills");
-const getPixSkill2 = document.getElementById("cmsWebDesignSkills");
+// const getPixTopBar = document.getElementById("topbar");
+// const getPixAbout = document.getElementById("about");
+// const getPixSkill1 = document.getElementById("frontBackEndSkills");
+// const getPixSkill2 = document.getElementById("cmsWebDesignSkills");
 const getWidth = screen.width;
-const getHeight = screen.height;
-var a = getPixTopBar.scrollHeight;
-var z = a + getPixAbout.scrollHeight;
-var y = z + getPixSkill1.scrollHeight;
-var x = y + getPixSkill2.scrollHeight;
+// var a = getPixTopBar.scrollHeight;
+// var z = a + getPixAbout.scrollHeight;
+// var y = z + getPixSkill1.scrollHeight;
+// var x = y + getPixSkill2.scrollHeight;
 
 window.addEventListener('load', () => {
 
@@ -33,7 +32,6 @@ window.addEventListener('load', () => {
 function responsiveNavBar() {
     var navTop = document.getElementById("navbar-right");
     let hNavBar = document.getElementById("navbar").style.height;
-    console.log("hauteur navbar1 : " + hNavBar);
     if (navTop.className === "topnav") {
         navTop.className += " responsive";
     } else {
@@ -42,11 +40,9 @@ function responsiveNavBar() {
 
     if (hNavBar == "14vh") {
         document.getElementById("navbar").style.height = "9vh";
-        console.log("hauteur navbar2 : " + hNavBar);
     } else if (hNavBar = "9vh") {
         document.getElementById("navbar").style.height = "14vh";
-        console.log("hauteur navbar3 : " + hNavBar);
-        return;
+        // return;
     }
 }
 
@@ -62,17 +58,26 @@ function whereScrollFromTop() { //Où l'utilisateur se trouve?
     if (averagePosition > 0 && averagePosition <= bloc1Height) {
     } else if (averagePosition > bloc1Height && averagePosition <= bloc1Height + bloc2Height) {
         document.getElementById("progressNav2").style.opacity = "1";
-        document.getElementById("progressNav2").style.left = "44.6%";
+        let abtXpos = document.getElementById('aboutNavBtn').getBoundingClientRect().left -2;
+        document.getElementById("progressNav2").style.left = abtXpos+'px';
     } else if (averagePosition > bloc1Height + bloc2Height  && averagePosition <= bloc1Height + bloc2Height + bloc3Height) {
-        document.getElementById("progressNav2").style.left = "50.7%";
+        document.getElementById("progressNav2").style.opacity = "1";
+        let skillsXpos = document.getElementById('skillsNavBtn').getBoundingClientRect().left +17;
+        document.getElementById("progressNav2").style.left = skillsXpos+'px';
     } else if (averagePosition > bloc1Height + bloc2Height +bloc3Height && averagePosition <= bloc1Height + bloc2Height + bloc3Height + bloc4Height) {
-
-        document.getElementById("progressNav2").style.left = "56.9%";
+        document.getElementById("progressNav2").style.opacity = "1";
+        let expXpos = document.getElementById('expNavBtn').getBoundingClientRect().left -5;
+        document.getElementById("progressNav2").style.left = expXpos+'px';
     } else if (averagePosition > bloc1Height+bloc2Height+bloc3Height+bloc4Height && averagePosition <= bloc1Height + bloc2Height + bloc3Height + bloc4Height + bloc5Height) {
-        document.getElementById("progressNav2").style.left = "62%";
+        document.getElementById("progressNav2").style.opacity = "1";
+        let folioXpos = document.getElementById('portfolioNavBtn').getBoundingClientRect().left -7;
+        document.getElementById("progressNav2").style.left = folioXpos+'px';
     } else if (averagePosition > bloc1Height+bloc2Height+bloc3Height+bloc4Height+bloc5Height) {
-        document.getElementById("progressNav2").style.left = "66.9%";
+        document.getElementById("progressNav2").style.opacity = "1";
+        let contactXpos = document.getElementById('contactNavBtn').getBoundingClientRect().left -12;
+        document.getElementById("progressNav2").style.left = contactXpos+'px';
     } else {
+        document.getElementById("progressNav2").style.left = '0px'
         document.getElementById("progressNav2").style.opacity = "0";
     }   
 }
@@ -80,6 +85,7 @@ function whereScrollFromTop() { //Où l'utilisateur se trouve?
 //Des le scroll, recalcul de la hauteur (calcFullHeight) en cas de 
 //redimensionnement de l'écran par le user.
 window.onscroll = function () {
+    const getWidth = screen.width;
     whereScrollFromTop();
     hNavBar = document.getElementById("navbar").style.height;
     if (document.documentElement.scrollTop > 50 & getWidth < 600) {
