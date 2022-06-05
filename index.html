@@ -10,6 +10,7 @@
   <link rel="icon" href="assets/img/logoPurple.png">
   <link rel="stylesheet" href="assets/css/aos.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
 </head>
 
 <body>
@@ -52,18 +53,17 @@
       <h2>A propos de moi</h2>
     </div>
     <div id="aboutContent">
-      <p>Actuellement en formation à la Manu , j'aime apprendre ce domaine ou le add . commit
-        et push n'ont plus de secret pour moi ( ou pas ?).
-      </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Provident placeat impedit velit officiis, nisi id voluptatum illo perspiciatis vero ut, inventore, sed
-        perferendis quasi quia laudantium voluptate recusandae pariatur beatae.
-        Consequuntur, nemo repudiandae cupiditate expedita aperiam maiores fugit iure commodi ipsa dolorem quis ducimus,
-        quam ex adipisci dolor assumenda. Sed porro quaerat fuga inventore, doloribus nobis reprehenderit ea ex
-        deleniti!
-        Quod omnis dolorem nam facere similique numquam nihil ipsam eveniet impedit vero dolorum magnam dolor, quis
-        doloribus possimus voluptatem iste eligendi voluptatum saepe amet commodi velit! Debitis omnis dolorum
-        voluptatum!
+      <p>
+        CV actuellement en cours d'élaboration.<hr>
+
+        Ayant toujours été passionné par la programmation, cela fait plusieurs années que je cherche à rentrer dans cette branche. Je trouve ça magique!<hr> 
+        Actuellement à La Manu, dans le cadre d'une reconversion professionnelle, l'opportunité m'a été offerte d'intégrer une formation de développeur web. Je l'ai saisie avec un grand plaisir et une forte motivation.
+        <hr>
+        J’ai d'abord fait mes armes sur Visual basic pour Excel. Le temps gagné par l'automatisation des tâches répétitives grâce aux macros ne me suffisait pas, j'ai poussé jusqu'à utiliser VB, en combinaison avec Excel, pour obtenir des résultats assez bluffants.<hr>
+
+        Apprendre de nouveaux langages dans ce domaine en renouvellement constant, ne me fait pas peur, au contraire.<br>
+
+        La Manu me donne une solide structure pour avancer, mais l'utilisation d'autres solutions de formation en autodidacte me permet d'obtenir des compétences supplémentaires. L'envie de progresser est toujours présente!<hr>
       </p>
       <div id="aboutContentImg">
         <div class="abtCntLogo" data-aos="fade-right">
@@ -102,7 +102,7 @@
 
         <div class="progress" data-label="JS">
           <img src="assets/img/jsIcon.png" alt="JS Icon">
-          <span class="value" style="width:5%;"></span>
+          <span class="value" style="width:55%;"></span>
         </div>
 
         <div class="progress" data-label="PHP">
@@ -114,7 +114,7 @@
         <p>CMS & Webdesign</p>
         <div class="progress" data-label="WordPress">
           <img src="assets/img/wordPressIcon.png" alt="WordPress">
-          <span class="value" style="width:3%;"></span>
+          <span class="value" style="width:25%;"></span>
         </div>
 
         <div class="progress" data-label="Adobe XD">
@@ -122,16 +122,21 @@
           <span class="value" style="width:40%;"></span>
         </div>
 
-        <div class="progress" data-label="GIMP">
-          <img src="assets/img/gimpIcon.png" alt="GIMP">
-          <span class="value" style="width:12%;"></span>
+        <div class="progress" data-label="Photoshop">
+          <img src="assets/img/photoshopLogo.svg" alt="photoshop">
+          <span class="value" style="width:32%;"></span>
+        </div>
+        
+        <div class="progress" data-label="Illustrator">
+          <img src="assets/img/illustratorLogo.svg" alt="Illustrator">
+          <span class="value" style="width:20%;"></span>
         </div>
       </div>
       <div data-aos="fade-right" id="workFlowSkills">
         <p>Environement de travail</p>
         <div class="progress" data-label="GitHub">
           <img src="assets/img/gitIcon.png" alt="GitHub">
-          <span class="value" style="width:15%;"></span>
+          <span class="value" style="width:40%;"></span>
         </div>
         <div class="progress" data-label="Visual Studio Code">
           <img src="assets/img/vscIcon.png" alt="VSC">
@@ -209,12 +214,37 @@
         </div>
       </div>
       <div class="portfolioCards">
-        
+        <div class="cardsBg bg-3">
+        </div>
+        <div class="cardsImg cardsImg3">
+        <img src="assets/img/htmlIcon.png" alt="">
+        <img src="assets/img/cssIcon.png" alt="">
+        <img src="assets/img/jsIcon.png" alt="">
+        </div>
       </div>
       <div class="portfolioCards">
-        
+        <div class="cardsBg bg-4">
+        </div>
+        <div class="cardsImg cardsImg4">
+        <img src="assets/img/htmlIcon.png" alt="">
+        <img src="assets/img/cssIcon.png" alt="">
+        <img src="assets/img/jsIcon.png" alt="">
+        </div>
       </div>
-    </div>  
+    </div>
+    <div id="modal">
+      <div id="modalContent">
+          <span id="closeModal">&times;</span>
+          <div id="insideModal">
+            <h2>ShiFuMi - la manu - 2022</h2>
+            <article>Exercice portant sur la conception d'un jeu de shifum</article>
+            <img src="assets/img/imgCards2.PNG" alt="ScreenShot de la page">
+            <p>Projet réaliser après 1 mois de présence à la manu, initié au JS.</p>
+            <p>Technologie utilisé : HTML/CSS/JS</p>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Lien</a>
+          </div>
+      </div>
+  </div>  
   </section>
   <!-- Contact -->
   <section data-aos="fade-right" id="contact">
@@ -259,6 +289,7 @@
   <script src="assets/js/aos.js"></script>
   <script>AOS.init();</script>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

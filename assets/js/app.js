@@ -1,17 +1,9 @@
 const titreSpans = document.querySelectorAll('h1 span');
 const medias = document.querySelectorAll('.bulle');
-// const getPixTopBar = document.getElementById("topbar");
-// const getPixAbout = document.getElementById("about");
-// const getPixSkill1 = document.getElementById("frontBackEndSkills");
-// const getPixSkill2 = document.getElementById("cmsWebDesignSkills");
 const getWidth = screen.width;
-// var a = getPixTopBar.scrollHeight;
-// var z = a + getPixAbout.scrollHeight;
-// var y = z + getPixSkill1.scrollHeight;
-// var x = y + getPixSkill2.scrollHeight;
 
+//Animation des elements du départ
 window.addEventListener('load', () => {
-
     const TL = gsap.timeline({
         paused: true
     });
@@ -32,16 +24,19 @@ window.addEventListener('load', () => {
 function responsiveNavBar() {
     var navTop = document.getElementById("navbar-right");
     let hNavBar = document.getElementById("navbar").style.height;
+
     if (navTop.className === "topnav") {
         navTop.className += " responsive";
     } else {
         navTop.className = "topnav";
     }
 
-    if (hNavBar == "14vh") {
+    if (hNavBar == "25vh") {
         document.getElementById("navbar").style.height = "9vh";
+        hamburgerIcon.setAttribute('src', 'assets/img/hamburger.svg');
     } else if (hNavBar = "9vh") {
-        document.getElementById("navbar").style.height = "14vh";
+        document.getElementById("navbar").style.height = "25vh";
+        hamburgerIcon.setAttribute('src', 'assets/img/hamburgerClose.svg');
         // return;
     }
 }
